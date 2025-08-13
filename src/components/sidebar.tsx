@@ -50,57 +50,64 @@ export function AppSidebar({ children }: { children: React.ReactNode }) {
   
   const [open, setOpen] = useState(true);
   return (
-    <div className="flex relative bg-transparent">
+    <div className="flex relative min-h-screen bg-transparent">
       <div
         className={cn(
           "mx-auto flex w-full max-w-full flex-1 flex-col overflow-hidden rounded-md border border-neutral-200  md:flex-row dark:border-neutral-700 ",
           "h-screen"
         )}>
         <Sidebar open={open} setOpen={setOpen}>
-          <SidebarBody className="justify-between gap-10">
-            <div className="flex flex-1 flex-col overflow-x-hidden overflow-y-auto">
-              {open ? <Logo /> : <LogoIcon />}
-              <div className="mt-8 flex flex-col gap-2">
-                <div>
-                  {open && (
-                    <span className="text-sm font-medium text-neutral-700 dark:text-neutral-200">
-                      Options
-                    </span>
-                  )}
-                </div>
-                {links.map((link, idx) => (
-                  <SidebarLink active={pathname === link.href}  className="z-50" key={idx} link={link} />
-                ))}
-              </div>
-              <div className="mt-8 flex flex-col gap-2">
-                <div>
-                  {open && (
-                    <span className="text-sm font-medium text-neutral-700 dark:text-neutral-200">
-                      Settings
-                    </span>
-                  )}
-                </div>
-                {links.map((link, idx) => (
-                  <SidebarLink key={idx} link={link} />
-                ))}
-              </div>
-            </div>
-            <div>
-              <SidebarLink
-                link={{
-                  label: "Manu Arora",
-                  href: "#",
-                  icon: (
-                    <img
-                      src="https://assets.aceternity.com/manu.png"
-                      className="h-7 w-7 shrink-0 rounded-full"
-                      width={50}
-                      height={50}
-                      alt="Avatar"
+          <SidebarBody className="justify-between flex gap-10">
+            <div className=" border-2 border-white p-2 justify-between flex flex-col h-screen gap-10 rounded-2xl">
+              <div className="flex flex-1 flex-col overflow-x-hidden overflow-y-auto">
+                {open ? <Logo /> : <LogoIcon />}
+                <div className="mt-8 flex flex-col gap-2">
+                  <div>
+                    {open && (
+                      <span className="text-sm font-medium text-neutral-700 dark:text-neutral-200">
+                        Options
+                      </span>
+                    )}
+                  </div>
+                  {links.map((link, idx) => (
+                    <SidebarLink
+                      active={pathname === link.href}
+                      className="z-50"
+                      key={idx}
+                      link={link}
                     />
-                  ),
-                }}
-              />
+                  ))}
+                </div>
+                <div className="mt-8 flex flex-col gap-2">
+                  <div>
+                    {open && (
+                      <span className="text-sm font-medium text-neutral-700 dark:text-neutral-200">
+                        Settings
+                      </span>
+                    )}
+                  </div>
+                  {links.map((link, idx) => (
+                    <SidebarLink key={idx} link={link} />
+                  ))}
+                </div>
+              </div>
+              <div>
+                <SidebarLink
+                  link={{
+                    label: "Manu Arora",
+                    href: "#",
+                    icon: (
+                      <img
+                        src="https://assets.aceternity.com/manu.png"
+                        className="h-7 w-7 shrink-0 rounded-full"
+                        width={50}
+                        height={50}
+                        alt="Avatar"
+                      />
+                    ),
+                  }}
+                />
+              </div>
             </div>
           </SidebarBody>
         </Sidebar>

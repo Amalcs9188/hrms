@@ -29,12 +29,12 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased relative`}>
-          {/* <div className="absolute z-0 inset-0 bg-[radial-gradient(ellipse_70%_70%_at_0%_0%,rgba(229,62,62,0.2),rgba(255,255,255,0))] dark:bg-[radial-gradient(ellipse_70%_70%_at_0%_0%,rgba(229,62,62,0.15),rgba(30,30,40,0))]" /> */}
-        
-          <div className="absolute z-0 w-full h-full inset-0 bg-gradient-to-tl from-[#b1b0b0] via-[#f5f3f3] to-orange-600/10"/>
-          {/* <div className="absolute right-0 bottom-0 z-0 w-full h-full bg-gradient-to-tl from-orange-700/20 to-white"/> */}
+        {/* <div className="absolute z-0 inset-0 bg-[radial-gradient(ellipse_70%_70%_at_0%_0%,rgba(229,62,62,0.2),rgba(255,255,255,0))] dark:bg-[radial-gradient(ellipse_70%_70%_at_0%_0%,rgba(229,62,62,0.15),rgba(30,30,40,0))]" /> */}
+
+        <div className="absolute z-0 w-full h-full inset-0 bg-gradient-to-tl from-[#ecabab] via-[#ffd7d7] to-[#f5c2c2]" />
+        {/* <div className="absolute right-0 bottom-0 z-0 w-full h-full bg-gradient-to-tl from-orange-700/20 to-white"/> */}
         <AppSidebar>
-          <Header/>
+          <Header />
           {children}
         </AppSidebar>
       </body>
