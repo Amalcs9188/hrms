@@ -24,7 +24,7 @@ export const WorkFormat = () => {
           {Data.map((item, index) => (
             <div
               key={index}
-              className={` flex justify-between bg-gradient-to-l from-orange-500/30  via-blue-300/30 to-transparent py-2 rounded-md  items-center`}>
+              className={` flex justify-between bg-gradient-to-l from-pink-400/30  via-pink-300/30 to-transparent py-2 rounded-md  items-center`}>
               <span>
                 <p className=" text-sm ">{item.name}</p>
                 <p className=" font-bold">{item.value}</p>

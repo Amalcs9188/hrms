@@ -58,7 +58,7 @@ export function AppSidebar({ children }: { children: React.ReactNode }) {
         )}>
         <Sidebar open={open} setOpen={setOpen}>
           <SidebarBody className="justify-between flex gap-10">
-            <div className=" border-2 border-white p-2 justify-between flex flex-col h-screen gap-10 rounded-2xl">
+            <div className=" border-2 border-white p-2 justify-between shadow-md flex flex-col h-screen gap-10 rounded-2xl">
               <div className="flex flex-1 flex-col overflow-x-hidden overflow-y-auto">
                 {open ? <Logo /> : <LogoIcon />}
                 <div className="mt-8 flex flex-col gap-2">

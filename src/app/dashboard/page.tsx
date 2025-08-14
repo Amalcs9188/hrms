@@ -32,17 +32,17 @@ const data = [
 
 const page = () => {
   return (
-      <div className="grid py-4  grid-cols-10">
-        <div className="col-span-7 flex gap-4 flex-col">
-          <HeroHeader data={data} />
-          <Hero/>
-          <Employees/>
-        </div>
-        <div className="col-span-3 space-y-2 overflow-hidden ps-5">
-          <TimeLIne />
-          <WorkFormat/>
-        </div>
+    <div className="grid py-4  grid-cols-10">
+      <div className="col-span-7 flex gap-4 flex-col">
+        <HeroHeader data={data} />
+        <Hero />
+        <Employees />
       </div>
+      <div className="col-span-3 space-y-2 overflow-hidden ps-5">
+        <TimeLIne />
+        <WorkFormat />
+      </div>
+    </div>
   );
 };
 
