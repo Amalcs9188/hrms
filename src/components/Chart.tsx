@@ -43,14 +43,14 @@ const MyGradientBarChart: React.FC = () => {
             0,
             chartArea.top
           );
-          gradient.addColorStop(0, "rgba(99, 10, 56, 0.8)");
-          gradient.addColorStop(1, "rgba(255, 99, 132, 0.5)");
+          gradient.addColorStop(0, "#804426");
+          gradient.addColorStop(1, "#f5caae");
     
           return gradient;
         },
 
         borderColor: "rgba(255, 99, 132, 1)",
-        borderWidth: 1,
+        borderWidth: 0,
         barThickness: 15,
       },
     ],

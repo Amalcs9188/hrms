@@ -167,7 +167,7 @@ export const SidebarLink = ({
     <a
       href={link.href}
       className={cn(
-        `flex items-center relative hover:bg-gradient-to-r ${active?"bg-gradient-to-r from-[#f6c2c2] to-gray-100/60":''}  Link_Hover  from-[#f6c2c2] to-gray-100/60  rounded-sm   backdrop:blur-2xl  justify-start gap-2 z-50 group/sidebar py-3  hover:border-r-neutral-200 hover:border-r-2 hover:border-t-[radial-gradient(orange,black)] dark:border-neutral-600  px-2`,
+        `flex items-center relative hover:bg-gradient-to-r ${active?"bg-gradient-to-r from-[#eead7b] to-gray-100/60":''}  Link_Hover  from-[#f5c09d] to-gray-100/60  rounded-sm   backdrop:blur-2xl  justify-start gap-2 z-50 group/sidebar py-3  hover:border-r-neutral-200 hover:border-r-2 hover:border-t-[radial-gradient(orange,black)] dark:border-neutral-600  px-2`,
         className
       )}
       {...props}>
