@@ -11,6 +11,7 @@ import {
 import { motion } from "motion/react";
 import { cn } from "@/lib/utils";
 import { usePathname } from "next/navigation";
+import { Card } from "./ui/card";
 
 export function AppSidebar({ children }: { children: React.ReactNode }) {
   const links = [
@@ -53,12 +54,12 @@ export function AppSidebar({ children }: { children: React.ReactNode }) {
     <div className="flex relative min-h-screen bg-transparent">
       <div
         className={cn(
-          "mx-auto flex w-full max-w-full flex-1 flex-col overflow-hidden rounded-md border border-neutral-200  md:flex-row dark:border-neutral-700 ",
+          "mx-auto flex w-full max-w-full flex-1 flex-col overflow-hidden rounded-md border-none  md:flex-row dark:border-neutral-700 ",
           "h-screen"
         )}>
         <Sidebar open={open} setOpen={setOpen}>
           <SidebarBody className="justify-between flex gap-10">
-            <div className=" border-2 border-white p-2 justify-between shadow-md flex flex-col h-screen gap-10 rounded-2xl">
+            <Card className="  border-none p-4 justify-between shadow-none flex flex-col h-screen gap-10 rounded-2xl">
               <div className="flex flex-1 flex-col overflow-x-hidden overflow-y-auto">
                 {open ? <Logo /> : <LogoIcon />}
                 <div className="mt-8 flex flex-col gap-2">
@@ -108,7 +109,7 @@ export function AppSidebar({ children }: { children: React.ReactNode }) {
                   }}
                 />
               </div>
-            </div>
+            </Card>
           </SidebarBody>
         </Sidebar>
         <main className="flex-1 overflow-y-auto p-4">{children}</main>

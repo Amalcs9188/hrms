@@ -1,0 +1,7 @@
+tunnel: amalcsdemosss
+credentials-file: "C:\\Users\\amalc\\.cloudflared\\af167120-0f1a-4ea1-870d-3b1390655b16.json"
+
+ingress:
+  - hostname: z.amalcs.gt.tc
+    service: http://localhost:3000
+  - service: http_status:404

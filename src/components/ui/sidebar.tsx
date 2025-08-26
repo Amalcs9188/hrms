@@ -4,6 +4,7 @@ import React, { useState, createContext, useContext } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { IconMenu2, IconX } from "@tabler/icons-react";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 interface Links {
   label: string;
@@ -164,13 +165,17 @@ export const SidebarLink = ({
   const { open, animate } = useSidebar();
   
   return (
-    <a
+    <Link
       href={link.href}
       className={cn(
         `flex items-center relative hover:bg-gradient-to-r ${active?"bg-gradient-to-r from-[#eead7b] to-gray-100/60":''}  Link_Hover  from-[#f5c09d] to-gray-100/60  rounded-sm   backdrop:blur-2xl  justify-start gap-2 z-50 group/sidebar py-3  hover:border-r-neutral-200 hover:border-r-2 hover:border-t-[radial-gradient(orange,black)] dark:border-neutral-600  px-2`,
         className
       )}
-      {...props}>
+      {...props}
+      
+      
+      
+    >
       {link.icon}
 
       <motion.span
@@ -181,6 +186,6 @@ export const SidebarLink = ({
         className="text-neutral-700 dark:text-neutral-200 text-sm group-hover/sidebar:translate-x-1   transition duration-150 whitespace-pre inline-block !p-0 !m-0">
         {link.label}
       </motion.span>
-    </a>
+    </Link>
   );
 };
